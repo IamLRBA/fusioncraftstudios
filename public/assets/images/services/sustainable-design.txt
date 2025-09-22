@@ -1,0 +1,10 @@
+# Placeholder for Sustainable Design
+  
+This is a placeholder image for the sustainable design service.
+Please replace this file with an actual image (JPG format recommended).
+
+Recommended dimensions: 800x600 pixels
+File format: JPG
+File size: Under 500KB for optimal performance
+
+The image should represent the service visually and maintain the professional aesthetic of the website.

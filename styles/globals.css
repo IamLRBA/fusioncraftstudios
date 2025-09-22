@@ -1,0 +1,1029 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import './variables.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-primary;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+  }
+
+  body {
+    font-family: var(--font-family-primary);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+    line-height: var(--leading-normal);
+    font-weight: var(--font-weight-thin);
+
+  }
+
+  /* Custom Scrollbar - Modern, Unified System */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: var(--radius-full);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(185, 149, 74, 0.3); /* var(--color-primary-600) with transparency */
+    border-radius: var(--radius-full);
+    border: 2px solid transparent;
+    background-clip: content-box;
+    transition: all var(--transition-base);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(185, 149, 74, 0.5); /* var(--color-primary-600) with more opacity */
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: rgba(185, 149, 74, 0.7); /* var(--color-primary-600) with full opacity */
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* Firefox Scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(185, 149, 74, 0.3) transparent;
+  }
+
+  /* Hide scrollbar for specific elements */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
+
+  /* Browser compatibility fixes */
+  /* Suppress warnings for vendor-specific properties */
+  * {
+    /* Ensure proper box-sizing */
+    box-sizing: border-box;
+  }
+
+  /* Browser compatibility fixes */
+
+
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-display);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--leading-tight);
+    color: var(--color-text-primary);
+  }
+
+  h1 {
+    font-size: var(--text-5xl);
+    font-weight: var(--font-weight-bold);
+  }
+
+  h2 {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  h3 {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  h4 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+  }
+
+  h5 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+  }
+
+  h6 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+  }
+
+  p {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-secondary);
+  }
+
+  a {
+    color: var(--color-text-accent);
+    text-decoration: none;
+    transition: color var(--transition-base);
+  }
+
+  a:hover {
+    color: var(--color-primary-700);
+  }
+}
+
+@layer components {
+  /* Button Styles - Original Theme */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply border-2 border-primary-600 text-primary-600 bg-transparent rounded-full px-6 py-3 transition-all duration-300 hover:bg-primary-600 hover:text-white focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-primary-600 bg-primary-600 text-white rounded-full px-6 py-3 transition-all duration-300 hover:bg-transparent hover:text-primary-600 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary-600 text-primary-600 bg-transparent rounded-full px-6 py-3 transition-all duration-300 hover:bg-primary-600 hover:text-white focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply text-primary-600 hover:bg-primary-100 focus:ring-primary-500 rounded-full px-6 py-3 transition-all duration-300;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-neutral-200;
+  }
+
+  .card-hover {
+    @apply transform hover:-translate-y-2 hover:scale-105;
+  }
+
+  /* Portal Card Styles */
+  .portal-card {
+    @apply relative overflow-hidden rounded-full backdrop-blur-sm border transition-all duration-500 hover:scale-105 shadow-md hover:shadow-xl;
+  }
+
+  .portal-card::before {
+    @apply content-[''] absolute inset-0  from-transparent via-accent-500/20 to-transparent opacity-0 transition-opacity duration-500;
+  }
+  
+  .portal-card:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Close Button Styles */
+  .close-btn {
+    @apply w-8 h-8 rounded-full bg-neutral-200 hover:bg-neutral-300 flex items-center justify-center transition-all duration-300 hover:rotate-90 hover:text-primary-600;
+  }
+
+  /* Navbar Search Styles */
+  .navbar-search-form {
+    @apply flex items-center space-x-2;
+  }
+
+  .search-input-wrapper {
+    @apply relative;
+  }
+
+  .navbar-search-input {
+    @apply w-64 pl-4 pr-4 py-2 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white/80 backdrop-blur-sm;
+  }
+
+  .navbar-search-submit {
+    @apply p-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-200;
+  }
+
+  .navbar-search-toggle {
+    @apply p-2 text-neutral-600 hover:text-primary-700 hover:bg-primary-50 rounded-lg transition-all duration-200;
+  }
+
+  .search-suggestions {
+  @apply absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-xl border border-neutral-200 max-h-80 overflow-y-auto modal-scrollbar z-50;
+}
+
+  .suggestion-item {
+    @apply px-4 py-3 hover:bg-primary-50 cursor-pointer border-b border-neutral-100 last:border-b-0 transition-colors duration-200;
+  }
+
+  .suggestion-category {
+    @apply block text-xs text-primary-600 font-medium mb-1;
+  }
+
+  .suggestion-title {
+    @apply block text-sm text-neutral-800 font-medium;
+  }
+
+  .suggestion-item.no-results {
+    @apply text-neutral-500 text-center py-4;
+  }
+
+  /* Section Styles */
+  .section {
+    @apply py-16 px-4;
+  }
+
+  .section-title {
+    @apply text-center mb-12;
+  }
+
+  .section-subtitle {
+    @apply text-center text-lg text-neutral-600 mb-16 max-w-3xl mx-auto;
+  }
+
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Animation Classes */
+  .fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  .slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .slide-down {
+    animation: slideDown 0.6s ease-out;
+  }
+
+  .scale-in {
+    animation: scaleIn 0.4s ease-out;
+  }
+
+  /* Wave Animation */
+  .wave {
+    animation: wave 3s ease-in-out infinite;
+  }
+
+  .wave-delay-1 {
+    animation-delay: 0s;
+  }
+
+  .wave-delay-2 {
+    animation-delay: 0.1s;
+  }
+
+  .wave-delay-3 {
+    animation-delay: 0.2s;
+  }
+
+  .wave-delay-4 {
+    animation-delay: 0.3s;
+  }
+
+  .wave-delay-5 {
+    animation-delay: 0.4s;
+  }
+}
+
+@layer utilities {
+  /* Text Colors */
+  .text-primary { color: var(--color-text-primary); }
+  .text-secondary { color: var(--color-text-secondary); }
+  .text-tertiary { color: var(--color-text-tertiary); }
+  .text-inverse { color: var(--color-text-inverse); }
+  .text-accent { color: var(--color-text-accent); }
+
+  /* Background Colors */
+  .bg-primary { background-color: var(--color-bg-primary); }
+  .bg-secondary { background-color: var(--color-bg-secondary); }
+  .bg-tertiary { background-color: var(--color-bg-tertiary); }
+  .bg-card { background-color: var(--color-bg-card); }
+
+  /* Border Colors */
+  .border-primary { border-color: var(--color-border-primary); }
+  .border-secondary { border-color: var(--color-border-secondary); }
+  .border-accent { border-color: var(--color-border-accent); }
+
+  /* Shadows */
+  .shadow-custom { box-shadow: var(--shadow-lg); }
+  .shadow-custom-lg { box-shadow: var(--shadow-xl); }
+
+  /* Scrollbar Utilities */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .section {
+    @apply py-12 px-4;
+  }
+  
+  h1 {
+    font-size: var(--text-4xl);
+  }
+  
+  h2 {
+    font-size: var(--text-3xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .container-custom {
+    @apply px-4;
+  }
+}
+
+/* Focus States */
+*:focus {
+  outline: 2px solid var(--color-accent-400);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-primary-200);
+  color: var(--color-text-primary);
+}
+
+
+
+/* Enhanced Custom Scrollbar for Audio Player */
+.audio-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.audio-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: var(--radius-full);
+}
+
+.audio-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(250, 204, 21, 0.3); /* var(--color-accent-400) with transparency */
+  border-radius: var(--radius-full);
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: all var(--transition-base);
+}
+
+.audio-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(250, 204, 21, 0.5);
+  background-clip: content-box;
+}
+
+.audio-scrollbar::-webkit-scrollbar-thumb:active {
+  background: rgba(250, 204, 21, 0.7);
+  background-clip: content-box;
+}
+
+.audio-scrollbar::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.audio-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(250, 204, 21, 0.3) transparent;
+}
+
+/* Horizontal Scrollbar Styles */
+.horizontal-scrollbar::-webkit-scrollbar {
+  width: auto;
+  height: 6px;
+}
+
+.horizontal-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: var(--radius-full);
+}
+
+.horizontal-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(185, 149, 74, 0.25);
+  border-radius: var(--radius-full);
+  border: 1.5px solid transparent;
+  background-clip: content-box;
+  transition: all var(--transition-base);
+}
+
+.horizontal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(185, 149, 74, 0.45);
+  background-clip: content-box;
+}
+
+.horizontal-scrollbar::-webkit-scrollbar-thumb:active {
+  background: rgba(185, 149, 74, 0.65);
+  background-clip: content-box;
+}
+
+.horizontal-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(185, 149, 74, 0.25) transparent;
+}
+
+/* Modal/Overlay Scrollbar Styles */
+.modal-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.modal-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: var(--radius-full);
+}
+
+.modal-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(185, 149, 74, 0.2);
+  border-radius: var(--radius-full);
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: all var(--transition-base);
+}
+
+.modal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(185, 149, 74, 0.4);
+  background-clip: content-box;
+}
+
+.modal-scrollbar::-webkit-scrollbar-thumb:active {
+  background: rgba(185, 149, 74, 0.6);
+  background-clip: content-box;
+}
+
+.modal-scrollbar::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.modal-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(185, 149, 74, 0.2) transparent;
+}
+
+
+
+/* Dark Mode Styles */
+.dark {
+  /* Dark mode color overrides */
+  --color-bg-primary: var(--color-neutral-900);
+  --color-bg-secondary: var(--color-neutral-800);
+  --color-bg-tertiary: var(--color-neutral-700);
+  --color-bg-card: var(--color-neutral-800);
+  
+  --color-text-primary: var(--color-neutral-50);
+  --color-text-secondary: var(--color-neutral-300);
+  --color-text-tertiary: var(--color-neutral-400);
+  --color-text-inverse: var(--color-neutral-900);
+  
+  --color-border-primary: var(--color-neutral-700);
+  --color-border-secondary: var(--color-neutral-600);
+  
+  --color-shadow-light: rgba(0, 0, 0, 0.3);
+  --color-shadow-medium: rgba(0, 0, 0, 0.4);
+  --color-shadow-heavy: rgba(0, 0, 0, 0.6);
+}
+
+/* Dark mode specific component styles */
+.dark .card {
+  @apply bg-neutral-800 border-neutral-700;
+}
+
+.dark .portal-card {
+  @apply bg-gradient-to-br from-neutral-800/90 to-neutral-900/90 border-neutral-600/30 hover:border-neutral-500/50;
+}
+
+.dark .navbar-search-input {
+  @apply bg-neutral-800/80 border-neutral-600 text-neutral-100;
+}
+
+.dark .search-suggestions {
+  @apply bg-neutral-800 border-neutral-600;
+}
+
+.dark .suggestion-item {
+  @apply border-neutral-700 hover:bg-neutral-700;
+}
+
+.dark .suggestion-title {
+  @apply text-neutral-200;
+}
+
+.dark .suggestion-category {
+  @apply text-primary-400;
+}
+
+.dark .close-btn {
+  @apply bg-neutral-700 hover:bg-neutral-600 text-neutral-300;
+}
+
+.dark .btn-primary {
+  @apply border-primary-400 text-primary-400 hover:bg-primary-400 hover:text-neutral-900;
+}
+
+.dark .btn-secondary {
+  @apply border-primary-400 bg-primary-400 text-neutral-900 hover:bg-transparent hover:text-primary-400;
+}
+
+.dark .btn-outline {
+  @apply border-primary-400 text-primary-400 hover:bg-primary-400 hover:text-neutral-900;
+}
+
+.dark .btn-ghost {
+  @apply text-primary-400 hover:bg-primary-400/20;
+}
+
+/* Dark mode navbar styles */
+.dark .navbar-search-toggle {
+  @apply text-neutral-300 hover:text-primary-400 hover:bg-neutral-800;
+}
+
+
+
+/* Dark mode backdrop blur for navbar */
+.dark nav.bg-white\/95 {
+  @apply bg-neutral-900/95;
+}
+
+/* Dark mode selection */
+.dark ::selection {
+  background-color: var(--color-primary-800);
+  color: var(--color-neutral-100);
+}
+
+/* Dark mode focus states */
+.dark *:focus {
+  outline-color: var(--color-accent-500);
+}
+
+
+
+/* Dark mode body and main content styles */
+.dark body {
+  background-color: var(--color-neutral-900);
+  color: var(--color-neutral-100);
+}
+
+.dark main {
+  background-color: var(--color-neutral-900);
+}
+
+.dark .section {
+  background-color: var(--color-neutral-900);
+}
+
+/* Dark mode section subtitle */
+.dark .section-subtitle {
+  @apply text-neutral-400;
+}
+
+/* Dark mode footer styles */
+.dark footer {
+  @apply bg-neutral-800 border-neutral-700;
+}
+
+.dark footer h3 {
+  @apply text-neutral-200;
+}
+
+.dark footer p {
+  @apply text-neutral-400;
+}
+
+.dark footer a {
+  @apply text-neutral-300 hover:text-primary-400;
+}
+
+/* Dark mode button hover states - handled above */
+
+/* Dark mode form elements */
+.dark input, .dark textarea, .dark select {
+  @apply bg-neutral-800 border-neutral-600 text-neutral-100;
+}
+
+.dark input:focus, .dark textarea:focus, .dark select:focus {
+  @apply border-primary-500 ring-primary-500/20;
+}
+
+.dark input::placeholder, .dark textarea::placeholder {
+  @apply text-neutral-500;
+}
+
+/* Dark mode link styles */
+.dark a {
+  @apply text-primary-400;
+}
+
+.dark a:hover {
+  @apply text-primary-300;
+}
+
+/* Dark mode heading styles */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  @apply text-neutral-100;
+}
+
+/* Dark mode paragraph styles */
+.dark p {
+  @apply text-neutral-300;
+}
+
+/* Dark mode list styles */
+.dark ul, .dark ol {
+  @apply text-neutral-300;
+}
+
+.dark li {
+  @apply text-neutral-300;
+}
+
+/* Dark mode table styles */
+.dark table {
+  @apply bg-neutral-800 border-neutral-700;
+}
+
+.dark th {
+  @apply bg-neutral-700 text-neutral-200 border-neutral-600;
+}
+
+.dark td {
+  @apply border-neutral-600 text-neutral-300;
+}
+
+.dark tr:hover {
+  @apply bg-neutral-700;
+}
+
+/* Dark mode code styles */
+.dark code {
+  @apply bg-neutral-800 text-neutral-200;
+}
+
+.dark pre {
+  @apply bg-neutral-800 border-neutral-700;
+}
+
+.dark pre code {
+  @apply bg-transparent;
+}
+
+/* Dark mode blockquote styles */
+.dark blockquote {
+  @apply border-neutral-600 text-neutral-300;
+}
+
+/* Dark mode hr styles */
+.dark hr {
+  @apply border-neutral-700;
+}
+
+/* Dark mode badge styles */
+.dark .badge {
+  @apply bg-neutral-700 text-neutral-200;
+}
+
+/* Dark mode tooltip styles */
+.dark .tooltip {
+  @apply bg-neutral-800 text-neutral-200 border-neutral-600;
+}
+
+/* Dark mode modal styles */
+.dark .modal {
+  @apply bg-neutral-800 border-neutral-700;
+}
+
+.dark .modal-header {
+  @apply border-neutral-700;
+}
+
+.dark .modal-footer {
+  @apply border-neutral-700;
+}
+
+/* Dark mode dropdown styles */
+.dark .dropdown {
+  @apply bg-neutral-800 border-neutral-700;
+}
+
+.dark .dropdown-item {
+  @apply text-neutral-300 hover:bg-neutral-700;
+}
+
+.dark .dropdown-item:hover {
+  @apply text-neutral-100;
+}
+
+/* Dark mode notification styles */
+.dark .notification {
+  @apply bg-neutral-800 border-neutral-700 text-neutral-200;
+}
+
+.dark .notification.success {
+  @apply bg-green-900/20 border-green-700 text-green-200;
+}
+
+.dark .notification.error {
+  @apply bg-red-900/20 border-red-700 text-red-200;
+}
+
+.dark .notification.warning {
+  @apply bg-yellow-900/20 border-yellow-700 text-yellow-200;
+}
+
+.dark .notification.info {
+  @apply bg-blue-900/20 border-blue-700 text-blue-200;
+}
+
+/* Dark mode loading spinner */
+.dark .spinner {
+  @apply border-neutral-700 border-t-primary-500;
+}
+
+/* Dark mode skeleton loading */
+.dark .skeleton {
+  @apply bg-neutral-700;
+}
+
+/* Dark mode progress bar */
+.dark .progress-bar {
+  @apply bg-neutral-700;
+}
+
+.dark .progress-fill {
+  @apply bg-primary-500;
+}
+
+/* Dark mode toggle switch */
+.dark .toggle-switch {
+  @apply bg-neutral-700;
+}
+
+.dark .toggle-switch.active {
+  @apply bg-primary-500;
+}
+
+.dark .toggle-switch-thumb {
+  @apply bg-neutral-300;
+}
+
+/* Custom radio and checkbox styling */
+input[type="radio"] {
+  @apply appearance-none w-4 h-4 border-2 border-primary-300 rounded-full bg-white cursor-pointer;
+}
+
+input[type="radio"]:checked {
+  @apply bg-primary-500 border-primary-500;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3ccircle cx='8' cy='8' r='3' fill='white'/%3e%3c/svg%3e");
+  background-size: 8px 8px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+input[type="radio"]:focus {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+}
+
+/* Dark mode checkbox and radio */
+.dark input[type="checkbox"], .dark input[type="radio"] {
+  @apply bg-neutral-800 border-neutral-600;
+}
+
+.dark input[type="radio"]:checked {
+  @apply bg-primary-500 border-primary-500;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3ccircle cx='8' cy='8' r='3' fill='white'/%3e%3c/svg%3e");
+  background-size: 8px 8px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dark input[type="checkbox"]:checked, .dark input[type="radio"]:checked {
+  @apply bg-primary-500 border-primary-500;
+}
+
+/* Dark mode range slider */
+.dark input[type="range"] {
+  @apply bg-neutral-700;
+}
+
+.dark input[type="range"]::-webkit-slider-thumb {
+  @apply bg-primary-500;
+}
+
+.dark input[type="range"]::-moz-range-thumb {
+  @apply bg-primary-500;
+}
+
+/* Dark mode file input */
+.dark input[type="file"] {
+  @apply bg-neutral-800 border-neutral-600 text-neutral-300;
+}
+
+.dark input[type="file"]::file-selector-button {
+  @apply bg-neutral-700 text-neutral-200 border-neutral-600 hover:bg-neutral-600;
+}
+
+/* Dark mode select dropdown arrow */
+.dark select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+}
+
+
+
+/* Dark mode focus ring */
+.dark *:focus {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-neutral-900;
+}
+
+/* Dark mode selection */
+.dark ::selection {
+  @apply bg-primary-800 text-neutral-100;
+}
+
+/* Dark mode backdrop */
+.dark .backdrop {
+  @apply bg-neutral-900/80;
+}
+
+/* Dark mode overlay */
+.dark .overlay {
+  @apply bg-neutral-900/90;
+}
+
+/* Dark mode glass effect */
+.dark .glass {
+  @apply bg-neutral-800/80 backdrop-blur-md border-neutral-700/50;
+}
+
+/* Dark mode gradient backgrounds */
+.dark .gradient-bg {
+  @apply bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900;
+}
+
+.dark .gradient-card {
+  @apply bg-gradient-to-br from-neutral-800 to-neutral-900;
+}
+
+/* Dark mode border utilities */
+.dark .border-light {
+  @apply border-neutral-700;
+}
+
+.dark .border-medium {
+  @apply border-neutral-600;
+}
+
+.dark .border-heavy {
+  @apply border-neutral-500;
+}
+
+/* Dark mode text utilities */
+.dark .text-muted {
+  @apply text-neutral-400;
+}
+
+.dark .text-subtle {
+  @apply text-neutral-500;
+}
+
+.dark .text-emphasis {
+  @apply text-neutral-200;
+}
+
+/* Dark mode background utilities */
+.dark .bg-muted {
+  @apply bg-neutral-800;
+}
+
+.dark .bg-subtle {
+  @apply bg-neutral-700;
+}
+
+.dark .bg-emphasis {
+  @apply bg-neutral-600;
+}
+
+/* ================================
+   Swiper Custom Styles - Arrows & Pagination
+   ================================ */
+
+/* Navigation arrows */
+.video-swiper .swiper-button-prev,
+.video-swiper .swiper-button-next {
+  color: var(--color-primary-600) !important; /* base color */
+  width: 30px;
+  height: 30px;
+  margin-top: -55px !important; /* slightly extend arrows upwards */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.video-swiper .swiper-button-prev:hover,
+.video-swiper .swiper-button-next:hover {
+  color: var(--color-primary-50) !important;
+  transform: scale(1.2);
+}
+
+/* Override default arrows using ::after */
+.video-swiper .swiper-button-prev::after {
+  content: '⟸' !important; /* custom left arrow */
+  font-size: 40px !important;
+  font-weight: bold;
+  color: var(--color-primary-300) !important;
+  margin-left: 10px !important;
+}
+
+.video-swiper .swiper-button-next::after {
+  content: '⟹' !important; /* custom right arrow */
+  font-size: 40px !important;
+  font-weight: bold;
+  color: var(--color-primary-300) !important;
+  margin-right: 10px !important;
+}
+
+/* Pagination dots */
+.video-swiper .swiper-pagination {
+  bottom: -5px !important; /* lower the dots */
+}
+
+.video-swiper .swiper-pagination-bullet {
+  background-color: var(--color-neutral-600) !important;
+  opacity: 0.5 !important;
+  transition: background-color var(--transition-base), opacity var(--transition-base);
+}
+
+.video-swiper .swiper-pagination-bullet-active {
+  background-color: var(--color-primary-300) !important;
+  opacity: 1 !important;
+}

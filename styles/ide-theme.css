@@ -1,0 +1,269 @@
+/* IDE-Inspired Theme for Software Development Page */
+/* Based on VS Code and Cursor AI color schemes */
+
+:root {
+  /* Dark Mode IDE Colors */
+  --ide-bg-primary: #1e1e1e;           /* VS Code dark background */
+  --ide-bg-secondary: #252526;         /* Sidebar background */
+  --ide-bg-tertiary: #2d2d30;          /* Panel background */
+  --ide-bg-accent: #0e639c;            /* Blue accent background */
+  
+  /* Text Colors */
+  --ide-text-primary: #cccccc;         /* Primary text */
+  --ide-text-secondary: #969696;       /* Secondary text */
+  --ide-text-accent: #4fc1ff;          /* Blue accent text */
+  --ide-text-success: #4ec9b0;         /* Green for success */
+  --ide-text-warning: #dcdcaa;         /* Yellow for warnings */
+  --ide-text-error: #f44747;           /* Red for errors */
+  
+  /* Border Colors */
+  --ide-border-primary: #3c3c3c;       /* Primary borders */
+  --ide-border-secondary: #464647;     /* Secondary borders */
+  --ide-border-accent: #007acc;        /* Blue accent border */
+  
+  /* Code Editor Colors */
+  --ide-syntax-keyword: #569cd6;       /* Blue for keywords */
+  --ide-syntax-string: #ce9178;        /* Orange for strings */
+  --ide-syntax-comment: #6a9955;       /* Green for comments */
+  --ide-syntax-function: #dcdcaa;      /* Yellow for functions */
+  --ide-syntax-variable: #9cdcfe;      /* Light blue for variables */
+  
+  /* Interactive Elements */
+  --ide-button-primary: #007acc;       /* Primary button */
+  --ide-button-hover: #1177bb;         /* Button hover */
+  --ide-button-active: #005a9e;        /* Button active */
+  
+  /* Gradients */
+  --ide-gradient-primary: linear-gradient(135deg, #1e1e1e 0%, #252526 100%);
+  --ide-gradient-accent: linear-gradient(135deg, #0e639c 0%, #1177bb 100%);
+  --ide-gradient-code: linear-gradient(135deg, #2d2d30 0%, #3c3c3c 100%);
+}
+
+/* Light Mode IDE Colors */
+.ide-light-theme {
+  --ide-bg-primary: #ffffff;           /* Light background */
+  --ide-bg-secondary: #f3f3f3;         /* Light sidebar */
+  --ide-bg-tertiary: #f8f8f8;          /* Light panel */
+  --ide-bg-accent: #e3f2fd;            /* Light blue accent */
+  
+  --ide-text-primary: #333333;         /* Dark text */
+  --ide-text-secondary: #666666;       /* Secondary text */
+  --ide-text-accent: #1976d2;          /* Blue accent */
+  --ide-text-success: #2e7d32;         /* Green */
+  --ide-text-warning: #f57c00;         /* Orange */
+  --ide-text-error: #d32f2f;           /* Red */
+  
+  --ide-border-primary: #e0e0e0;       /* Light borders */
+  --ide-border-secondary: #d0d0d0;     /* Secondary borders */
+  --ide-border-accent: #1976d2;        /* Blue accent */
+  
+  --ide-button-primary: #1976d2;       /* Primary button */
+  --ide-button-hover: #1565c0;         /* Button hover */
+  --ide-button-active: #0d47a1;        /* Button active */
+  
+  --ide-gradient-primary: linear-gradient(135deg, #ffffff 0%, #f3f3f3 100%);
+  --ide-gradient-accent: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  --ide-gradient-code: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+}
+
+/* IDE Theme Utility Classes */
+.ide-bg-primary { background-color: var(--ide-bg-primary); }
+.ide-bg-secondary { background-color: var(--ide-bg-secondary); }
+.ide-bg-tertiary { background-color: var(--ide-bg-tertiary); }
+.ide-bg-accent { background-color: var(--ide-bg-accent); }
+
+.ide-text-primary { color: var(--ide-text-primary); }
+.ide-text-secondary { color: var(--ide-text-secondary); }
+.ide-text-accent { color: var(--ide-text-accent); }
+.ide-text-success { color: var(--ide-text-success); }
+.ide-text-warning { color: var(--ide-text-warning); }
+.ide-text-error { color: var(--ide-text-error); }
+
+.ide-border-primary { border-color: var(--ide-border-primary); }
+.ide-border-secondary { border-color: var(--ide-border-secondary); }
+.ide-border-accent { border-color: var(--ide-border-accent); }
+
+.ide-button-primary {
+  background-color: var(--ide-button-primary);
+  color: white;
+  border: 1px solid var(--ide-border-accent);
+  transition: all 0.3s ease;
+}
+
+.ide-button-primary:hover {
+  background-color: var(--ide-button-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 122, 204, 0.3);
+}
+
+.ide-button-primary:active {
+  background-color: var(--ide-button-active);
+  transform: translateY(0);
+}
+
+/* Code Editor Style Elements */
+.ide-code-block {
+  background: var(--ide-gradient-code);
+  border: 1px solid var(--ide-border-primary);
+  border-radius: 8px;
+  padding: 16px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.ide-syntax-keyword { color: var(--ide-syntax-keyword); }
+.ide-syntax-string { color: var(--ide-syntax-string); }
+.ide-syntax-comment { color: var(--ide-syntax-comment); }
+.ide-syntax-function { color: var(--ide-syntax-function); }
+.ide-syntax-variable { color: var(--ide-syntax-variable); }
+
+/* IDE Card Styles */
+.ide-card {
+  background: var(--ide-gradient-primary);
+  border: 1px solid var(--ide-border-primary);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.ide-card:hover {
+  border-color: var(--ide-border-accent);
+  box-shadow: 0 8px 30px rgba(0, 122, 204, 0.15);
+  transform: translateY(-2px);
+}
+
+/* IDE Service Card Specific Styles */
+.ide-service-card {
+  background: var(--ide-gradient-primary);
+  border: 1px solid var(--ide-border-primary);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.ide-service-card:hover {
+  border-color: var(--ide-border-accent);
+  box-shadow: 0 8px 25px rgba(0, 122, 204, 0.2);
+}
+
+.ide-service-number {
+  color: var(--ide-text-accent);
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.ide-service-title {
+  color: var(--ide-text-primary);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 8px 0;
+}
+
+.ide-service-description {
+  color: var(--ide-text-secondary);
+  line-height: 1.6;
+  margin: 16px 0;
+}
+
+/* IDE Thumbnail Styles */
+.ide-thumbnail {
+  background: var(--ide-bg-tertiary);
+  border: 1px solid var(--ide-border-primary);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ide-thumbnail:hover {
+  border-color: var(--ide-border-accent);
+  box-shadow: 0 4px 15px rgba(0, 122, 204, 0.2);
+  transform: translateY(-2px);
+}
+
+/* IDE Button Styles */
+.ide-read-more-btn {
+  background: var(--ide-gradient-accent);
+  color: white;
+  border: 1px solid var(--ide-border-accent);
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ide-read-more-btn:hover {
+  background: var(--ide-button-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 122, 204, 0.3);
+}
+
+.ide-read-more-btn:active {
+  background: var(--ide-button-active);
+  transform: translateY(0);
+}
+
+/* IDE Dropdown Styles */
+.ide-dropdown {
+  background: var(--ide-bg-secondary);
+  border: 1px solid var(--ide-border-primary);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.ide-dropdown-text {
+  color: var(--ide-text-primary);
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* IDE Image Container */
+.ide-image-container {
+  background: var(--ide-gradient-code);
+  border: 1px solid var(--ide-border-primary);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* IDE Section Background */
+.ide-section-bg {
+  background: var(--ide-gradient-primary);
+  min-height: 100vh;
+}
+
+/* IDE Title Styles */
+.ide-section-title {
+  color: var(--ide-text-primary);
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.ide-section-title .ide-accent {
+  color: var(--ide-text-accent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ide-section-title {
+    font-size: 2rem;
+  }
+  
+  .ide-service-number {
+    font-size: 2rem;
+  }
+  
+  .ide-service-title {
+    font-size: 1.25rem;
+  }
+}
+
