@@ -96,3 +96,14 @@ public/assets/videos/interior-design-showcase.mp4
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+\n# Ignore large video files\npublic/assets/videos/3d-architecture-demo.mp4\npublic/assets/videos/interior-design-showcase.mp4\npublic/assets/videos/construction-progress.mp4\npublic/assets/videos/fashion/fashion-analysis.mp4\npublic/assets/videos/fashion/color-coordination-seasonal.mp4\npublic/assets/videos/fashion/styling-casual-elegant.mp4\n
+\n# Ignore large video files\npublic/assets/videos/3d-architecture-demo.mp4\npublic/assets/videos/interior-design-showcase.mp4\npublic/assets/videos/construction-progress.mp4\npublic/assets/videos/fashion/fashion-analysis.mp4\npublic/assets/videos/fashion/color-coordination-seasonal.mp4\npublic/assets/videos/fashion/styling-casual-elegant.mp4\n
+ 
+# Ignore large video files 
+public/assets/videos/3d-architecture-demo.mp4 
+public/assets/videos/interior-design-showcase.mp4 
+public/assets/videos/construction-progress.mp4 
+public/assets/videos/fashion/fashion-analysis.mp4 
+public/assets/videos/fashion/color-coordination-seasonal.mp4 
+public/assets/videos/fashion/styling-casual-elegant.mp4
+public/assets/videos/**/*.mp4
