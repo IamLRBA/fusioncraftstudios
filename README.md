@@ -2,29 +2,29 @@
 
 A stunning, interactive portfolio website showcasing five major skill categories: Architecture, Music & Poetry, Art & Design, Software Development, and Fashion.
 
-## 🚀 Features
+## ☰ Features
 
-### ✨ Interactive Elements
+### ⋆✴︎⌖⋆ Interactive Elements
 - **Loading Screen Animation**: Logo assembles from fragments
 - **3D Background**: Floating geometric shapes with Three.js
 - **Portal Navigation**: 5 animated skill category cards with unique hover effects
 - **Smooth Animations**: Framer Motion powered transitions and micro-interactions
 - **Responsive Design**: Fully responsive across all devices
 
-### 🎨 Design System
+### 𓂃✍︎ Design System
 - **Dark Theme**: Earthy-toned minimalist design with black/white accents
 - **Custom Animations**: Tailwind CSS custom keyframes and animations
 - **Glass Effects**: Modern backdrop blur and transparency effects
 - **Typography**: Inter and JetBrains Mono font families
 
-### 🔧 Technology Stack
+### ⚛︎ Technology Stack
 - **Next.js 14**: App Router with TypeScript
 - **Tailwind CSS**: Custom design system with extended utilities
 - **Framer Motion**: Smooth animations and transitions
 - **Three.js/React Three Fiber**: 3D graphics and effects
 - **GSAP**: Advanced scroll-based animations (when needed)
 
-## 📁 Project Structure
+## 🗀 Project Structure
 
 ```
 fusioncraft-portfolio/
@@ -60,34 +60,34 @@ fusioncraft-portfolio/
 └── package.json                 # Dependencies and scripts
 ```
 
-## 🎯 Skill Categories
+## 🕸 Skill Categories
 
-### 1. 🏗️ Architecture
+### 1. ⾕ Architecture
 - **3D Gallery**: Interactive project showcase
 - **Blueprint Animation**: Scroll-triggered transformations
 - **Philosophy**: "Designing realities that belong to tomorrow"
 
-### 2. 🎵 Music & Poetry
+### 2. 𝄞 Music & Poetry
 - **Audio Player**: Interactive music player with visualizer
 - **Sound-Reactive Background**: Dynamic wave animations
 - **Poetry Visualizer**: Animated text and lyrics
 
-### 3. 🎨 Art & Design
+### 3. ☯︎ Art & Design
 - **Interactive Canvas**: Morphing art gallery
 - **Jerry-Rig Philosophy**: Random art generator
 - **Digital/Physical Art**: Collage grid layout
 
-### 4. 💻 Software Development
+### 4. ⚛︎ Software Development
 - **Code Editor Interface**: Live coding environment look
 - **Interactive Demos**: Placeholder code snippets
 - **Open Source Showcase**: Project contributions
 
-### 5. 👗 Fashion
+### 5. ✂ Fashion
 - **Lookbook Carousel**: Outfit styling showcase
 - **Style Variations**: Multiple styling approaches
 - **Moodboard Layout**: Visual inspiration boards
 
-## 🚀 Getting Started
+## ⏱ Getting Started
 
 ### Prerequisites
 - Node.js 18+ 
@@ -121,23 +121,23 @@ npm run build
 npm start
 ```
 
-## 🎨 Customization
+## 𓅓 Customization
 
 ### Replacing Placeholder Assets
 
-#### Images
+#### ⛶ Images
 - Replace files in `/public/assets/images/`
 - Update image paths in components
 - Recommended formats: JPG, PNG, WebP
 - Optimize for web (compress, resize)
 
-#### Audio Files
+#### ♪ Audio Files
 - Replace files in `/public/assets/audio/`
 - Update audio paths in `AudioPlayer.tsx`
 - Supported formats: MP3, WAV, OGG
 - Keep file sizes reasonable for web
 
-#### Video Files
+#### 📽 Video Files
 - Replace files in `/public/assets/videos/`
 - Update video paths in components
 - Recommended formats: MP4, WebM
@@ -154,7 +154,7 @@ npm start
 3. Update portal navigation in `PortalNavigation.tsx`
 4. Add routing and navigation
 
-## 🔧 Development
+## ✇ Development
 
 ### Available Scripts
 - `npm run dev` - Start development server
@@ -174,7 +174,7 @@ npm start
 - Code splitting with dynamic imports
 - Optimized animations and transitions
 
-## 🌟 Features in Detail
+## 𝄜 Features in Detail
 
 ### Loading Screen
 - Logo fragments assemble with staggered animation
@@ -196,7 +196,7 @@ npm start
 - Adaptive layouts for all screen sizes
 - Touch-friendly interactions
 
-## 🎭 Animation System
+## ⫘⫘ Animation System
 
 ### Framer Motion
 - Page transitions
@@ -215,7 +215,7 @@ npm start
 - Reduced motion support
 - Optimized animation loops
 
-## 🔮 Future Enhancements
+## ⛓ Future Enhancements
 
 ### Planned Features
 - [ ] Blog/News section
@@ -233,7 +233,7 @@ npm start
 - [ ] Analytics integration
 - [ ] Performance monitoring
 
-## 🤝 Contributing
+## 🖇 Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -241,18 +241,18 @@ npm start
 4. Test thoroughly
 5. Submit a pull request
 
-## 📄 License
+## ✉ License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
+## ⚜ Acknowledgments
 
 - Next.js team for the amazing framework
 - Framer Motion for smooth animations
 - Three.js community for 3D graphics
 - Tailwind CSS for the utility-first approach
 
-## 📞 Support
+## ✆ Support
 
 For questions or support:
 - Create an issue in the repository
@@ -261,6 +261,6 @@ For questions or support:
 
 ---
 
-**Built with ❤️ by FusionCRAFT STUDIOS**
+**Built with ♡ by FusionCRAFT STUDIOS**
 
 *Where creativity meets craftsmanship across five dimensions of human expression* 
