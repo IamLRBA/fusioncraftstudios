@@ -82,7 +82,7 @@ fusioncraft-portfolio/
 - **Interactive Demos**: Placeholder code snippets
 - **Open Source Showcase**: Project contributions
 
-### 5. ✂ Fashion
+### 5. ✄ Fashion
 - **Lookbook Carousel**: Outfit styling showcase
 - **Style Variations**: Multiple styling approaches
 - **Moodboard Layout**: Visual inspiration boards
@@ -125,19 +125,19 @@ npm start
 
 ### Replacing Placeholder Assets
 
-#### ⛶ Images
+#### ⛶ 🀥🀣🀦🀧🀨 Images
 - Replace files in `/public/assets/images/`
 - Update image paths in components
 - Recommended formats: JPG, PNG, WebP
 - Optimize for web (compress, resize)
 
-#### ♪ Audio Files
+#### ♫♪♬ Audio Files
 - Replace files in `/public/assets/audio/`
 - Update audio paths in `AudioPlayer.tsx`
 - Supported formats: MP3, WAV, OGG
 - Keep file sizes reasonable for web
 
-#### 📽 Video Files
+#### ⩇⩇:⩇⩇ Video Files
 - Replace files in `/public/assets/videos/`
 - Update video paths in components
 - Recommended formats: MP4, WebM
@@ -174,7 +174,7 @@ npm start
 - Code splitting with dynamic imports
 - Optimized animations and transitions
 
-## 𝄜 Features in Detail
+## 𑁍 Features in Detail
 
 ### Loading Screen
 - Logo fragments assemble with staggered animation
@@ -215,7 +215,7 @@ npm start
 - Reduced motion support
 - Optimized animation loops
 
-## ⛓ Future Enhancements
+## ⌯⌲ Future Enhancements
 
 ### Planned Features
 - [ ] Blog/News section
@@ -233,7 +233,7 @@ npm start
 - [ ] Analytics integration
 - [ ] Performance monitoring
 
-## 🖇 Contributing
+## ❄ Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -241,11 +241,11 @@ npm start
 4. Test thoroughly
 5. Submit a pull request
 
-## ✉ License
+## ⓘ License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## ⚜ Acknowledgments
+## 𓂀 Acknowledgments
 
 - Next.js team for the amazing framework
 - Framer Motion for smooth animations
