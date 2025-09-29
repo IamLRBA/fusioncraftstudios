@@ -87,12 +87,12 @@ export default function ThemeSwitcher() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-10 h-10 rounded-lg bg-primary-100 dark:bg-primary-800 text-primary-600 dark:text-primary-400 hover:bg-primary-200 dark:hover:bg-primary-700 transition-all duration-200 flex items-center justify-center"
+        className="no-button-style flex items-center px-3 py-2 text-neutral-600 hover:text-primary-700 transition-all duration-300 group relative"
         aria-label="Toggle theme"
         aria-expanded={isOpen}
         aria-haspopup="true"
       >
-        <Palette className="w-5 h-5" />
+        <Palette className="w-4 h-4" />
       </motion.button>
 
       {/* Theme Dropdown */}
@@ -133,20 +133,16 @@ export default function ThemeSwitcher() {
                   return (
                     <motion.button
                       key={themeOption.value}
-                      whileHover={{ backgroundColor: 'rgba(59, 130, 246, 0.1)' }}
+                      whileHover={{ backgroundColor: 'transparent' }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => handleThemeChange(themeOption.value)}
-                      className={`w-full flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 ${
+                      className={`theme-option w-full flex items-center space-x-3 p-3 transition-all duration-200 ${
                         isActive 
-                          ? 'bg-primary-100 dark:bg-primary-700 text-primary-700 dark:text-primary-300' 
-                          : 'text-gray-700 dark:text-primary-300 hover:bg-gray-50 dark:hover:bg-primary-700/50'
+                          ? 'text-primary-700 dark:text-primary-300' 
+                          : 'text-gray-700 dark:text-primary-300'
                       }`}
                     >
-                      <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                        isActive 
-                          ? 'bg-primary-200 dark:bg-primary-600' 
-                          : 'bg-gray-100 dark:bg-primary-700'
-                      }`}>
+                      <div className="w-8 h-8 flex items-center justify-center bg-transparent">
                         <Icon className={`w-4 h-4 ${
                           isActive 
                             ? 'text-primary-600 dark:text-primary-400' 
