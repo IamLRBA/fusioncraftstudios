@@ -2,6 +2,8 @@
 
 A stunning, interactive portfolio website showcasing five major skill categories: Architecture, Music & Poetry, Art & Design, Software Development, and Fashion.
 
+---
+
 ## ☰ Features
 
 ### ⋆✴︎⌖⋆ Interactive Elements
@@ -23,6 +25,8 @@ A stunning, interactive portfolio website showcasing five major skill categories
 - **Framer Motion**: Smooth animations and transitions
 - **Three.js/React Three Fiber**: 3D graphics and effects
 - **GSAP**: Advanced scroll-based animations (when needed)
+
+---
 
 ## 🗀 Project Structure
 
@@ -60,6 +64,8 @@ fusioncraft-portfolio/
 └── package.json                 # Dependencies and scripts
 ```
 
+---
+
 ## 🕸 Skill Categories
 
 ### 1. ⾕ Architecture
@@ -87,7 +93,9 @@ fusioncraft-portfolio/
 - **Style Variations**: Multiple styling approaches
 - **Moodboard Layout**: Visual inspiration boards
 
-## ⏱ Getting Started
+---
+
+## ⏲ Getting Started
 
 ### Prerequisites
 - Node.js 18+ 
@@ -121,11 +129,13 @@ npm run build
 npm start
 ```
 
+---
+
 ## 𓅓 Customization
 
 ### Replacing Placeholder Assets
 
-#### ⛶ 🀥🀣🀦🀧🀨 Images
+#### ⛶⛶⛶ Images
 - Replace files in `/public/assets/images/`
 - Update image paths in components
 - Recommended formats: JPG, PNG, WebP
@@ -154,6 +164,8 @@ npm start
 3. Update portal navigation in `PortalNavigation.tsx`
 4. Add routing and navigation
 
+---
+
 ## ✇ Development
 
 ### Available Scripts
@@ -173,6 +185,8 @@ npm start
 - Image optimization with Next.js Image
 - Code splitting with dynamic imports
 - Optimized animations and transitions
+
+---
 
 ## 𑁍 Features in Detail
 
@@ -196,6 +210,8 @@ npm start
 - Adaptive layouts for all screen sizes
 - Touch-friendly interactions
 
+---
+
 ## ⫘⫘ Animation System
 
 ### Framer Motion
@@ -215,6 +231,8 @@ npm start
 - Reduced motion support
 - Optimized animation loops
 
+---
+
 ## ⌯⌲ Future Enhancements
 
 ### Planned Features
@@ -233,7 +251,9 @@ npm start
 - [ ] Analytics integration
 - [ ] Performance monitoring
 
-## ❄ Contributing
+---
+
+## ೱ Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -241,9 +261,13 @@ npm start
 4. Test thoroughly
 5. Submit a pull request
 
+---
+
 ## ⓘ License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
 
 ## 𓂀 Acknowledgments
 
@@ -251,6 +275,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Framer Motion for smooth animations
 - Three.js community for 3D graphics
 - Tailwind CSS for the utility-first approach
+
+---
 
 ## ✆ Support
 
@@ -264,3 +290,5 @@ For questions or support:
 **Built with ♡ by FusionCRAFT STUDIOS**
 
 *Where creativity meets craftsmanship across five dimensions of human expression* 
+
+---
