@@ -11,6 +11,17 @@
     @apply border-primary;
   }
 
+  /* Reset button styles */
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -35,7 +46,9 @@
     font-feature-settings: 'rlig' 1, 'calt' 1;
     line-height: var(--leading-normal);
     font-weight: var(--font-weight-thin);
-
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   /* Custom Scrollbar - Modern, Unified System */

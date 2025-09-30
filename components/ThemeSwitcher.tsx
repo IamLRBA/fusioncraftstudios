@@ -87,7 +87,7 @@ export default function ThemeSwitcher() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-10 h-10 rounded-lg bg-primary-100 dark:bg-primary-800 text-primary-600 dark:text-primary-400 hover:bg-primary-200 dark:hover:bg-primary-700 transition-all duration-200 flex items-center justify-center"
+        className="w-10 h-10 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-all duration-200 flex items-center justify-center"
         aria-label="Toggle theme"
         aria-expanded={isOpen}
         aria-haspopup="true"
