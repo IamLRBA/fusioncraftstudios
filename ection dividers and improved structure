@@ -1,0 +1,320 @@
+[1mdiff --git a/README.md b/README.md[m
+[1mindex c7df7e0..9ffce4a 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,30 +1,38 @@[m
+[32m+[m
+ # FusionCRAFT STUDIOS - Portfolio Website[m
+ [m
+ A stunning, interactive portfolio website showcasing five major skill categories: Architecture, Music & Poetry, Art & Design, Software Development, and Fashion.[m
+ [m
+[31m-## 🚀 Features[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## ☰ Features[m
+[32m+[m
+[32m+[m[32m### ⋆✴︎⌖⋆ Interactive Elements[m
+ [m
+[31m-### ✨ Interactive Elements[m
+ - **Loading Screen Animation**: Logo assembles from fragments[m
+ - **3D Background**: Floating geometric shapes with Three.js[m
+ - **Portal Navigation**: 5 animated skill category cards with unique hover effects[m
+ - **Smooth Animations**: Framer Motion powered transitions and micro-interactions[m
+ - **Responsive Design**: Fully responsive across all devices[m
+ [m
+[31m-### 🎨 Design System[m
+[32m+[m[32m### 𓂃✍︎ Design System[m
+[32m+[m
+ - **Dark Theme**: Earthy-toned minimalist design with black/white accents[m
+ - **Custom Animations**: Tailwind CSS custom keyframes and animations[m
+ - **Glass Effects**: Modern backdrop blur and transparency effects[m
+ - **Typography**: Inter and JetBrains Mono font families[m
+ [m
+[31m-### 🔧 Technology Stack[m
+[32m+[m[32m### ⚛︎ Technology Stack[m
+[32m+[m
+ - **Next.js 14**: App Router with TypeScript[m
+ - **Tailwind CSS**: Custom design system with extended utilities[m
+ - **Framer Motion**: Smooth animations and transitions[m
+ - **Three.js/React Three Fiber**: 3D graphics and effects[m
+ - **GSAP**: Advanced scroll-based animations (when needed)[m
+ [m
+[31m-## 📁 Project Structure[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 🗀 Project Structure[m
+ [m
+ ```[m
+ fusioncraft-portfolio/[m
+[36m@@ -60,39 +68,48 @@[m [mfusioncraft-portfolio/[m
+ └── package.json                 # Dependencies and scripts[m
+ ```[m
+ [m
+[31m-## 🎯 Skill Categories[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 🕸 Skill Categories[m
+[32m+[m
+[32m+[m[32m### 1. ⾕ Architecture[m
+ [m
+[31m-### 1. 🏗️ Architecture[m
+ - **3D Gallery**: Interactive project showcase[m
+ - **Blueprint Animation**: Scroll-triggered transformations[m
+ - **Philosophy**: "Designing realities that belong to tomorrow"[m
+ [m
+[31m-### 2. 🎵 Music & Poetry[m
+[32m+[m[32m### 2. 𝄞 Music & Poetry[m
+[32m+[m
+ - **Audio Player**: Interactive music player with visualizer[m
+ - **Sound-Reactive Background**: Dynamic wave animations[m
+ - **Poetry Visualizer**: Animated text and lyrics[m
+ [m
+[31m-### 3. 🎨 Art & Design[m
+[32m+[m[32m### 3. ☯︎ Art & Design[m
+[32m+[m
+ - **Interactive Canvas**: Morphing art gallery[m
+ - **Jerry-Rig Philosophy**: Random art generator[m
+ - **Digital/Physical Art**: Collage grid layout[m
+ [m
+[31m-### 4. 💻 Software Development[m
+[32m+[m[32m### 4. ⚛︎ Software Development[m
+[32m+[m
+ - **Code Editor Interface**: Live coding environment look[m
+ - **Interactive Demos**: Placeholder code snippets[m
+ - **Open Source Showcase**: Project contributions[m
+ [m
+[31m-### 5. 👗 Fashion[m
+[32m+[m[32m### 5. ✄ Fashion[m
+[32m+[m
+ - **Lookbook Carousel**: Outfit styling showcase[m
+ - **Style Variations**: Multiple styling approaches[m
+ - **Moodboard Layout**: Visual inspiration boards[m
+ [m
+[31m-## 🚀 Getting Started[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## ⛟ Getting Started[m
+ [m
+ ### Prerequisites[m
+[32m+[m
+ - Node.js 18+ [m
+ - npm or yarn[m
+[31m-[m
+ ### Installation[m
+ [m
+ 1. **Clone the repository**[m
+[36m@@ -100,17 +117,14 @@[m [mfusioncraft-portfolio/[m
+    git clone <repository-url>[m
+    cd fusioncraft-portfolio[m
+    ```[m
+[31m-[m
+ 2. **Install dependencies**[m
+    ```bash[m
+    npm install[m
+    ```[m
+[31m-[m
+ 3. **Run the development server**[m
+    ```bash[m
+    npm run dev[m
+    ```[m
+[31m-[m
+ 4. **Open your browser**[m
+    Navigate to [http://localhost:3000](http://localhost:3000)[m
+ [m
+[36m@@ -121,89 +135,112 @@[m [mnpm run build[m
+ npm start[m
+ ```[m
+ [m
+[31m-## 🎨 Customization[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 𓅓 Customization[m
+[32m+[m
+ [m
+ ### Replacing Placeholder Assets[m
+ [m
+[31m-#### Images[m
+[32m+[m[32m#### ⛶⛶⛶ Images[m
+[32m+[m
+ - Replace files in `/public/assets/images/`[m
+ - Update image paths in components[m
+ - Recommended formats: JPG, PNG, WebP[m
+ - Optimize for web (compress, resize)[m
+ [m
+[31m-#### Audio Files[m
+[32m+[m[32m#### ♫♪♬ Audio Files[m
+[32m+[m
+ - Replace files in `/public/assets/audio/`[m
+ - Update audio paths in `AudioPlayer.tsx`[m
+ - Supported formats: MP3, WAV, OGG[m
+ - Keep file sizes reasonable for web[m
+ [m
+[31m-#### Video Files[m
+[32m+[m[32m#### ⩇⩇:⩇⩇ Video Files[m
+[32m+[m
+ - Replace files in `/public/assets/videos/`[m
+ - Update video paths in components[m
+ - Recommended formats: MP4, WebM[m
+ - Consider using video hosting for large files[m
+ [m
+ ### Modifying Colors and Themes[m
+[32m+[m
+ - Edit `tailwind.config.js` for color schemes[m
+ - Update `styles/globals.css` for custom animations[m
+ - Modify component-specific styling[m
+ [m
+ ### Adding New Sections[m
+[32m+[m
+ 1. Create new page in `/app/sections/`[m
+ 2. Add section component in `/sections/`[m
+ 3. Update portal navigation in `PortalNavigation.tsx`[m
+ 4. Add routing and navigation[m
+ [m
+[31m-## 🔧 Development[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## ✇ Development[m
+ [m
+ ### Available Scripts[m
+[32m+[m
+ - `npm run dev` - Start development server[m
+ - `npm run build` - Build for production[m
+ - `npm run start` - Start production server[m
+ - `npm run lint` - Run ESLint[m
+ [m
+ ### Code Style[m
+[32m+[m
+ - TypeScript for type safety[m
+ - ESLint for code quality[m
+ - Prettier for formatting (recommended)[m
+ - Component-based architecture[m
+ [m
+ ### Performance Optimization[m
+[32m+[m
+ - Lazy loading for heavy components[m
+ - Image optimization with Next.js Image[m
+ - Code splitting with dynamic imports[m
+ - Optimized animations and transitions[m
+ [m
+[31m-## 🌟 Features in Detail[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 𑁍 Features in Detail[m
+ [m
+ ### Loading Screen[m
+[32m+[m
+ - Logo fragments assemble with staggered animation[m
+ - Smooth transition to main content[m
+ - Custom keyframe animations[m
+ [m
+ ### Portal Navigation[m
+[32m+[m
+ - Unique hover effects for each category[m
+ - Smooth scaling and movement[m
+ - Interactive visual feedback[m
+ [m
+ ### 3D Background[m
+[32m+[m
+ - Floating geometric shapes[m
+ - Subtle rotation and movement[m
+ - Performance-optimized rendering[m
+ [m
+ ### Responsive Design[m
+[32m+[m
+ - Mobile-first approach[m
+ - Adaptive layouts for all screen sizes[m
+ - Touch-friendly interactions[m
+ [m
+[31m-## 🎭 Animation System[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## ⫘⫘ Animation System[m
+ [m
+ ### Framer Motion[m
+[32m+[m
+ - Page transitions[m
+ - Scroll-triggered animations[m
+ - Hover effects and micro-interactions[m
+ [m
+ ### Custom CSS Animations[m
+[32m+[m
+ - Logo assembly[m
+ - Sound waves[m
+ - Matrix effects[m
+[36m@@ -211,13 +248,17 @@[m [mnpm start[m
+ - Wireframe drawing[m
+ [m
+ ### Performance Considerations[m
+[32m+[m
+ - Hardware acceleration[m
+ - Reduced motion support[m
+ - Optimized animation loops[m
+ [m
+[31m-## 🔮 Future Enhancements[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## ⌯⌲ Future Enhancements[m
+ [m
+ ### Planned Features[m
+[32m+[m
+ - [ ] Blog/News section[m
+ - [ ] Contact form integration[m
+ - [ ] Portfolio filtering system[m
+[36m@@ -227,13 +268,16 @@[m [mnpm start[m
+ - [ ] Real-time collaboration tools[m
+ [m
+ ### Technical Improvements[m
+[32m+[m
+ - [ ] PWA capabilities[m
+ - [ ] Advanced caching strategies[m
+ - [ ] SEO optimization[m
+ - [ ] Analytics integration[m
+ - [ ] Performance monitoring[m
+ [m
+[31m-## 🤝 Contributing[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## ೱ Contributing[m
+ [m
+ 1. Fork the repository[m
+ 2. Create a feature branch[m
+[36m@@ -241,18 +285,24 @@[m [mnpm start[m
+ 4. Test thoroughly[m
+ 5. Submit a pull request[m
+ [m
+[31m-## 📄 License[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## ⓘ License[m
+ [m
+ This project is licensed under the MIT License - see the LICENSE file for details.[m
+ [m
+[31m-## 🙏 Acknowledgments[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 𓂀 Acknowledgments[m
+ [m
+ - Next.js team for the amazing framework[m
+ - Framer Motion for smooth animations[m
+ - Three.js community for 3D graphics[m
+ - Tailwind CSS for the utility-first approach[m
+ [m
+[31m-## 📞 Support[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## ✆ Support[m
+ [m
+ For questions or support:[m
+ - Create an issue in the repository[m
+[36m@@ -261,6 +311,7 @@[m [mFor questions or support:[m
+ [m
+ ---[m
+ [m
+[31m-**Built with ❤️ by FusionCRAFT STUDIOS**[m
+[32m+[m[32m**Built with ♡ by FusionCRAFT STUDIOS**[m
+[32m+[m[32m*Where creativity meets craftsmanship across five dimensions of human expression*[m[41m [m
+ [m
+[31m-*Where creativity meets craftsmanship across five dimensions of human expression* [m
+\ No newline at end of file[m
+[32m+[m[32m---[m
+\ No newline at end of file[m
