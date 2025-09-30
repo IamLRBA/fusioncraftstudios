@@ -20,41 +20,6 @@
 }
 
 @layer components {
-  /* Unified Button System */
-  .btn {
-    @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-medium transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500 disabled:opacity-50 disabled:cursor-not-allowed;
-  }
-
-  /* Base variants (light on dark theme by default) */
-  .btn-primary {
-    @apply bg-primary-600 text-white border border-primary-600 hover:bg-transparent hover:text-primary-300 hover:border-primary-500;
-  }
-
-  .btn-secondary {
-    @apply bg-transparent text-primary-300 border border-primary-500 hover:bg-primary-600 hover:text-white hover:border-primary-600;
-  }
-
-  .btn-outline {
-    @apply bg-transparent border border-white/20 text-white hover:bg-white/10;
-  }
-
-  .btn-ghost {
-    @apply bg-transparent text-white/80 hover:text-white hover:bg-white/10;
-  }
-
-  /* Size variants */
-  .btn-sm { @apply px-4 py-2 text-sm; }
-  .btn-lg { @apply px-8 py-4 text-lg; }
-
-  /* Button group with inverse hover pairing */
-  .btn-group { @apply inline-flex items-center gap-3; }
-  .btn-group .btn:first-child {
-    @apply btn-primary;
-  }
-  .btn-group .btn:last-child {
-    @apply btn-secondary;
-  }
-
   .portal-card {
     @apply relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-800/50 to-primary-900/50 backdrop-blur-sm border border-primary-700/30 hover:border-primary-600/50 transition-all duration-500 hover:scale-105;
   }

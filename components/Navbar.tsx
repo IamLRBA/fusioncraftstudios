@@ -213,7 +213,7 @@ export default function Navbar() {
                     onClick={() => setIsPortalsOpen(!isPortalsOpen)}
                     onMouseEnter={() => setIsPortalsOpen(true)}
                     onMouseLeave={() => setIsPortalsOpen(false)}
-                    className={`no-button-style flex items-center space-x-2 px-3 py-2 transition-all duration-300 group relative ${
+                    className={`flex items-center space-x-2 px-3 py-2 transition-all duration-300 group relative ${
                       portalItems.some(item => isActive(item.href))
                         ? 'text-primary-700'
                         : 'text-neutral-600 hover:text-primary-700'
@@ -282,10 +282,10 @@ export default function Navbar() {
               <div className="relative" ref={searchRef}>
                 <button 
                   onClick={isSearchOpen ? handleSearchSubmit : toggleSearch} 
-                  className="no-button-style flex items-center px-3 py-2 text-neutral-600 hover:text-primary-700 transition-all duration-300 group relative"
+                  className="p-2 text-neutral-600 hover:text-primary-700 transition-all duration-200"
                   type={isSearchOpen ? "submit" : "button"}
                 >
-                  <HiSearch className="w-4 h-4" />
+                  <HiSearch className="w-5 h-5" />
                 </button>
                 {isSearchOpen && (
                   <form onSubmit={handleSearchSubmit} className="navbar-search-form inline-flex items-center">
@@ -294,7 +294,7 @@ export default function Navbar() {
                         <button 
                           type="button"
                           onClick={clearSearch}
-                          className="search-clear-btn absolute left-3 top-1/2 transform -translate-y-1/2 z-10 text-neutral-500 hover:text-neutral-700 transition-colors duration-200"
+                          className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10 p-1 text-neutral-500 hover:text-neutral-700 transition-colors duration-200"
                         >
                           <HiX className="w-4 h-4" />
                         </button>
@@ -339,7 +339,7 @@ export default function Navbar() {
             {/* Mobile Menu Button - Centered on mobile */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden absolute right-0 p-2 rounded-lg text-neutral-600 hover:text-primary-700 hover:bg-primary-50 transition-colors duration-200"
+              className="lg:hidden absolute right-0 p-2 text-neutral-600 hover:text-primary-700 transition-colors duration-200"
             >
               {isOpen ? <HiX className="w-6 h-6" /> : <HiMenu className="w-6 h-6" />}
             </button>
@@ -385,16 +385,13 @@ export default function Navbar() {
                   <div className="relative">
                     <button 
                       onClick={isSearchOpen ? handleSearchSubmit : toggleSearch} 
-                      className="w-full flex items-center space-x-3 text-neutral-600 hover:text-primary-700 transition-all duration-300 group relative mb-4"
+                      className="w-full flex items-center justify-center p-3 text-primary-600 hover:text-primary-700 transition-colors duration-200 mb-4"
                       type={isSearchOpen ? "submit" : "button"}
                     >
-                      <HiSearch className="w-5 h-5" />
+                      <HiSearch className="w-5 h-5 mr-2" />
                       <span className="font-medium">
                         {isSearchOpen ? 'Search' : 'Open Search'}
                       </span>
-                      
-                      {/* Hover underline */}
-                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-600 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                     </button>
                     
                     {isSearchOpen && (
@@ -404,7 +401,7 @@ export default function Navbar() {
                             <button 
                               type="button"
                               onClick={clearSearch}
-                              className="search-clear-btn absolute left-3 top-1/2 transform -translate-y-1/2 z-10 text-neutral-500 hover:text-neutral-700 transition-colors duration-200"
+                              className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10 p-1 text-neutral-500 hover:text-neutral-700 transition-colors duration-200"
                             >
                               <HiX className="w-4 h-4" />
                             </button>
@@ -465,10 +462,10 @@ export default function Navbar() {
                           key={item.name}
                           href={item.href}
                           onClick={closeMenu}
-                          className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-300 group relative ${
+                          className={`flex items-center space-x-3 px-4 py-3 transition-all duration-300 group relative ${
                             active 
                               ? 'text-primary-700 bg-primary-50' 
-                              : 'text-neutral-600 hover:text-primary-700 hover:bg-primary-50'
+                              : 'text-neutral-600 hover:text-primary-700'
                           }`}
                         >
                           <Icon className="w-5 h-5" />
@@ -506,10 +503,10 @@ export default function Navbar() {
                             key={item.name}
                             href={item.href}
                             onClick={closeMenu}
-                            className={`flex items-center space-x-3 px-8 py-3 rounded-lg transition-all duration-300 group relative ${
+                            className={`flex items-center space-x-3 px-8 py-3 transition-all duration-300 group relative ${
                               active 
                                 ? 'text-primary-700 bg-primary-50' 
-                                : 'text-neutral-600 hover:text-primary-700 hover:bg-primary-50'
+                                : 'text-neutral-600 hover:text-primary-700'
                             }`}
                           >
                             <Icon className="w-5 h-5" />
